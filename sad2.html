@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Feelings </title>
+    <link rel="stylesheet" href="sad.css">
+
+    <script>
+
+        alert("Can you escape sadness?");
+
+        var originalx = 620;
+        var originaly = 390;
+
+        function moveadiv(div2move, wheremov) {
+            var adiv = document.getElementById(div2move);
+            var direction = wheremov;
+
+            if (direction == "left") {
+                originalx = originalx - 10;
+            } else if (direction == "right") {
+                originalx = originalx + 10;
+            } else if (direction == "up") {
+                originaly = originaly - 10;
+            } else if (direction == "down") {
+                originaly = originaly + 10;
+            }
+
+            if (originaly < 325) {
+                originaly = 325;
+            }
+
+            if (originaly > 450) {
+                originaly = 450;
+            }
+
+            if (originalx < 525) {
+                originalx = 525;
+            }
+
+            if (originalx > 700) {
+                originalx = 700;
+            }
+            adiv.style.left = originalx + "px";
+            adiv.style.top = originaly + "px";
+        }
+        function keyStuff(event) {
+
+            var x = event.charCode || event.keyCode;
+            var y = String.fromCharCode(x);
+
+            if (x == 97) {  //a
+                moveadiv('TheMovingDiv', 'left');
+
+            } else if (x == 100) { //d
+                moveadiv('TheMovingDiv', 'right');
+
+            } else if (x == 119) { //w
+                moveadiv('TheMovingDiv', 'up');
+
+            } else if (x == 115) { //s
+                moveadiv('TheMovingDiv', 'down');
+
+            } else {  //any other keys pressed:
+                //alert("Do nothing!");
+            }
+        }
+    </script>
+
+</head>
+
+<body class="sad2-page" onkeypress="keyStuff(event);">
+
+    <audio controls autoplay loop class="player s2">
+        <source src="sad4.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <a href="sad3.html">
+        <div class="circle3">
+            ENTER THE VOID </div>
+    </a>
+
+    <div id="TheMovingDiv">
+    </div>
+
+    <div class="mov-keys"> W <br>
+        A S D </div>
+
+</body>
+
+</html>

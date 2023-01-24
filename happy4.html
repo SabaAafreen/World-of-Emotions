@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Balloon Pop</title>
+ts
+<style>
+
+    h1 {
+		font-family: 'Poppins', sans-serif;
+		text-transform: uppercase;
+		color: black;
+		text-align: center;
+		margin-top: 200px;
+		font-size: 60px;
+		transition: 1s;
+	}
+	
+	body {
+		background-color: #2e2a66;
+		text-transform: uppercase;
+		font-family: 'Poppins', Arial, Helvetica, sans-serif;
+		font-size: medium;
+		color: #ffff;
+	}
+
+	   
+   #balloons{
+		background-color: transparent;
+		position: absolute;
+		top:0px;
+		left:5px;
+		z-index: 1;
+   }
+   #pink-orangeballoon1{
+		background-color: transparent;
+		position: absolute;
+		display: block;
+		transform: translate(5px, 102px) rotate(15deg);
+		z-index: 3;
+   }
+   #candy{
+		background-color: transparent;
+		position: absolute;
+		top: 240px;
+		left: 8px;
+		z-index: 2;
+   }
+   #pink-orangeballoon2{
+		background-color: transparent;
+		position: absolute;
+		display: block;
+		transform: translate(2650px, 45px) rotate(-33deg);
+		z-index: 3;
+   }
+   #hiddenphrase1{
+		top: 60px;
+		left: 2780px;
+		position: absolute;
+		z-index: 2;
+   
+   }
+   #pink-orangeballoon3{
+		background-color: transparent;
+		position: absolute;
+		display: block;
+		transform: translate(1560px, 1628px) rotate(15deg);
+		z-index: 3;
+   }
+   #hiddenphrase2{
+		top: 1750px;
+		left: 1700px;
+		position: absolute;
+		z-index: 2;
+   
+   }
+   #orangeballoon1{
+		background-color: transparent;
+		position: absolute;
+		display: block;
+		transform: translate(910px, 640px) rotate(22deg);
+		z-index: 3;
+   }
+   #hiddenphrase3{
+		top: 660px;
+		left: 970px;
+		position: absolute;
+		z-index: 2;
+   
+   }
+   #purpleballoon{
+		background-color: transparent;
+		position: absolute;
+		display: block;
+		transform: translate(1320px, 900px) rotate(-14deg);
+		z-index: 3;
+   }
+   #gift{
+		top: 940px;
+		left: 1100px;
+		position: absolute;
+		z-index: 2;
+   
+   }
+   #hotpinkballoon1{
+		background-color: transparent;
+		position: absolute;
+		display: block;
+		transform: translate(1985px, 678px) rotate(7deg);
+		z-index: 3;
+   }
+    #hiddenphrase4{
+		top: 820px;
+		left: 2200px;
+		position: absolute;
+		z-index: 2;
+   
+   }
+      
+   #pinkballoon{
+		background-color: transparent;
+		position: absolute;
+		display: block;
+		transform: translate(2600px, 1355px) rotate(13deg);
+		z-index: 3;
+   }
+   #hiddenphrase5{
+		top: 1300px;
+		left: 2720px;
+		position: absolute;
+		z-index: 2;
+   
+   }
+   #hotpinkballoon2{
+		background-color: transparent;
+		position: absolute;
+		display: block;
+		transform: translate(370px, 893px) rotate(-15deg);
+		z-index: 3;
+   }
+   #hiddenphrase6{
+		top: 880px;
+		left: 440px;
+		position: absolute;
+		z-index: 2;
+   
+   }
+    #pink-orangeballoon4{
+		background-color: transparent;
+		position: absolute;
+		display: block;
+		transform: translate(535px, 1860px) rotate(15deg);
+		z-index: 3;
+   }
+   #lollipop{
+		top: 1950px;
+		left: 600px;
+		position: absolute;
+		z-index: 2;
+   
+   }
+   
+   
+   #circle {
+		background-color: #FAE567;
+		position: fixed;
+		padding: 25px;
+		text-transform: uppercase;
+		margin-left: 995px;
+		margin-top: 490px;
+		height: 100px;
+		width: 100px;
+		border-radius: 50%;
+		display: none;
+		text-align: center;
+		transition: border-radius 1s, box-shadow 1s, background 1s, transform 1s;
+		z-index: 4;
+		
+    }
+    
+	
+	#circle:hover {
+		border-radius: 25%;
+		box-shadow: 0px 0px 25px #3a3a3c;
+		transition: border-radius 0.3s, box-shadow 0.3s, background 0.3s, transform 0.5s;
+    }
+	
+    
+   
+    .player {
+	  opacity: 40%;
+	  position: fixed;
+	  margin-left: 20px;
+	  z-index: 4;
+	}
+	.player.h4 {
+		margin-top: 30px;
+	}
+	a:link {
+		color: black;
+		text-decoration: none;
+	}
+	  
+	a:visited {
+		color: black;
+		text-decoration: none;
+	}
+	  
+	a:hover {
+		color:  black;
+		text-decoration: none;
+	}
+	  
+	a:active {
+		color: black;
+		text-decoration: none;
+	}
+
+		
+   
+
+
+</style>
+<script>
+	alert("POP THOSE BALLOONS! POP POP POP!");
+	function showcircle2(circleButton2){
+		var stateC = document.getElementById(circleButton2).style.display;
+		
+		if(stateC == 'inline-block'){
+			document.getElementById(circleButton2).style.display = 'none';
+		}
+		else{
+			document.getElementById(circleButton2).style.display = 'inline-block';
+		}
+	}
+	function hideballoon1(balloonimg1){
+		var state1 = document.getElementById(balloonimg1).style.display;
+		
+		if(state1 == 'block'){
+			document.getElementById(balloonimg1).style.display = 'block';
+		}
+		else{
+			document.getElementById(balloonimg1).style.display = 'none';
+		}
+	}
+	function hideballoon2(balloonimg2){
+		var state2 = document.getElementById(balloonimg2).style.display;
+		
+		if(state2 == 'block'){
+			document.getElementById(balloonimg2).style.display = 'block';
+		}
+		else{
+			document.getElementById(balloonimg2).style.display = 'none';
+		}
+	}
+	function hideballoon3(balloonimg3){
+		var state3 = document.getElementById(balloonimg3).style.display;
+		
+		if(state3 == 'block'){
+			document.getElementById(balloonimg3).style.display = 'block';
+		}
+		else{
+			document.getElementById(balloonimg3).style.display = 'none';
+		}
+	}
+	function hideballoon4(balloonimg4){
+		var state4 = document.getElementById(balloonimg4).style.display;
+		
+		if(state4 == 'block'){
+			document.getElementById(balloonimg4).style.display = 'block';
+		}
+		else{
+			document.getElementById(balloonimg4).style.display = 'none';
+		}
+	}
+	function hideballoon5(balloonimg5){
+		var state5 = document.getElementById(balloonimg5).style.display;
+		
+		if(state5 == 'block'){
+			document.getElementById(balloonimg5).style.display = 'block';
+		}
+		else{
+			document.getElementById(balloonimg5).style.display = 'none';
+		}
+	}
+	function hideballoon6(balloonimg6){
+		var state6 = document.getElementById(balloonimg6).style.display;
+		
+		if(state6 == 'block'){
+			document.getElementById(balloonimg6).style.display = 'block';
+		}
+		else{
+			document.getElementById(balloonimg6).style.display = 'none';
+		}
+	}
+	function hideballoon7(balloonimg7){
+		var state7 = document.getElementById(balloonimg7).style.display;
+		
+		if(state7 == 'block'){
+			document.getElementById(balloonimg7).style.display = 'block';
+		}
+		else{
+			document.getElementById(balloonimg7).style.display = 'none';
+		}
+	}
+	function hideballoon8(balloonimg8){
+		var state8 = document.getElementById(balloonimg8).style.display;
+		
+		if(state8 == 'block'){
+			document.getElementById(balloonimg8).style.display = 'block';
+		}
+		else{
+			document.getElementById(balloonimg8).style.display = 'none';
+		}
+	}
+	
+	function hideballoon9(balloonimg9){
+		var state9 = document.getElementById(balloonimg9).style.display;
+		
+		if(state9 == 'block'){
+			document.getElementById(balloonimg9).style.display = 'block';
+		}
+		else{
+			document.getElementById(balloonimg9).style.display = 'none';
+		}
+	}
+
+
+
+
+
+</script>
+</head>
+
+<body>
+
+<!--Audio player playing: Happy.mp3-->
+<audio controls autoplay loop class="player h4"><source src="Happy 4.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
+
+<!--balloon background-->
+<div id="balloons"><img src="balloons.png" alt="colourful balloons with purple background" >
+</div> 
+
+
+<!--individual balloon: pink-orange balloon on far top-left-->
+<div id="pink-orangeballoon1"><a href ="javascript:void(0);" onclick="hideballoon1('pink-orangeballoon1');"><img src="pink-orange_balloon.png" alt="pink and orange gradient balloon" ></a>
+</div> 
+<!--candy hidden under pink-orange balloon on far top-left -->
+<div id="candy"><img src="candy.png" alt="green, purple, and red wrapped candy" > </div>
+
+
+<!--individual balloon: pink-orange balloon on far top-right-->
+<div id="pink-orangeballoon2"><a href ="javascript:void(0);" onclick="hideballoon2('pink-orangeballoon2');"><img src="pink-orange_balloon.png" alt="pink and orange gradient balloon" ></a>
+</div> 
+<!--hidden joke under pink-orange balloon on far top-left -->
+<div id ="hiddenphrase1"><h1>laughter is the best medicine.<h1></div>
+
+
+<!--individual balloon: pink-orange balloon on bottom center-->
+<div id="pink-orangeballoon3"><a href ="javascript:void(0);" onclick="hideballoon3('pink-orangeballoon3');"><img src="pink-orange_balloon.png" alt="pink and orange gradient balloon" ></a>
+</div> 
+<!--hidden phrase under pink-orange balloon on  bottom center-->
+<div id ="hiddenphrase2"><h1>HAPPY BIRTHDAY!<h1></div>
+
+
+<!--individual balloon: orange balloon on top left-->
+<div id="orangeballoon1"><a href ="javascript:void(0);" onclick="hideballoon4('orangeballoon1');"><img src="orange_balloon.png" alt="orange to light orange gradient balloon" ></a>
+</div> 
+<!--hidden phrase under pink-orange balloon on far top-left -->
+<div id ="hiddenphrase3"><h1>FREE HUGS!<h1></div>
+
+
+<!--individual balloon: purple balloon in middle-->
+<div id="purpleballoon"><a href ="javascript:void(0);" onclick="hideballoon5('purpleballoon');"><img src="purple_balloon.png" alt="purple balloon" ></a>
+</div> 
+<!--hidden phrase under purple balloon in middle-->
+<div id ="gift"><img src="present.png" alt="yellow gift box with red ribbon" ></div>
+
+
+<!--individual balloon: hotpink balloon on left-->
+<div id="hotpinkballoon1"><a href ="javascript:void(0);" onclick="hideballoon6('hotpinkballoon1');"><img src="hotpink_balloon1.png" alt="hotpink balloon" ></a>
+</div> 
+<!--hidden phrase under hotpink balloon on right -->
+<div id ="hiddenphrase4"><h1>BE HAPPY.</h1></div>
+
+<!--individual balloon: pink balloon on far bottom left-->
+<div id="pinkballoon"><a href ="javascript:void(0);" onclick="hideballoon7('pinkballoon'); showcircle2('circle');"><img src="pink_balloon.png" alt="pink balloon" ></a>
+</div> 
+<a href="landing.html"><div id="circle"><p><b>how do you feel now?</b></p></div></a>
+<!--hidden phrase under pink balloon on far bottom left -->
+<div id ="hiddenphrase5"><h1>did you have fun?<h1></div>
+
+
+<!--individual balloon: hotpink balloon on left-->
+<div id="hotpinkballoon2"><a href ="javascript:void(0);" onclick="hideballoon8('hotpinkballoon2');"><img src="hotpink_balloon2.png" alt="hotpink balloon" ></a>
+</div> 
+<!--hidden phrase under hotpink balloon on left -->
+<div id ="hiddenphrase6"><h1>kitty!</h1></div>
+
+
+<!--individual balloon: pink-orange balloon on far bottom left-->
+<div id="pink-orangeballoon4"><a href ="javascript:void(0);" onclick="hideballoon9('pink-orangeballoon4');"><img src="pink-orange_balloon2.png" alt="pink and orange gradient balloon" ></a>
+</div> 
+<!--candy hidden under pink-orange balloon on far bottom left -->
+<div id="lollipop"><img src="lollipops.png" alt="green, purple, and yellow lollipops" > </div>
+
+
+
+
+
+
+
+</body>
+</html>

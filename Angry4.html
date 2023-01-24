@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Sadness- 2</title>
+	<link rel="stylesheet" href="Angry4.css">
+
+	<script>
+
+		alert( "Seems like you want something different to deal with anger!");
+
+		function timedText() {
+		  setTimeout(myTimeout1, 2000) 
+		  setTimeout(myTimeout2, 4000) 
+		  setTimeout(myTimeout3, 6000) 
+		  setTimeout(myTimeout4, 8000) 
+		  setTimeout(myTimeout5, 10000) 
+		  setTimeout(myTimeout6, 12000) 
+		  setTimeout(myTimeout7, 14000) 
+		}
+
+		function myTimeout1() {
+		  document.getElementById("demo").innerHTML = "2 seconds";
+		}
+		function myTimeout2() {
+		  document.getElementById("demo").innerHTML = "4 seconds";
+		}
+		function myTimeout3() {
+		  document.getElementById("demo").innerHTML = "6 seconds";
+		}
+		function myTimeout4() {
+		  document.getElementById("demo").innerHTML = "8 seconds";
+		}
+		function myTimeout5() {
+		  document.getElementById("demo").innerHTML = "10 seconds";
+		}
+		function myTimeout6() {
+		  document.getElementById("demo").innerHTML = "12 seconds";
+		}
+		function myTimeout7() {
+		  document.getElementById("demo").innerHTML = "How does that feel?" ;
+		}
+
+		setTimeout(function(){
+            window.location.href = 'landing.html';
+         }, 28000);   //automatic transition to the emotion main page (landing page)//
+
+		</script>
+
+</head>
+<body>
+
+	<section>
+		<audio controls autoplay loop class="player s1">
+        <source src="Angry4.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    	</audio>
+
+		<button onclick="timedText()" class="button">Lets calm down together
+		</button>
+
+		<div> <p href= "landing.html" id="demo">Its okay to take your time
+		<br>and breathe </br></p></div>
+
+		<a href="landing.html">
+        <div class="feelcheck">
+            Feel Check </div>
+    	</a>
+	
+		<div class="wave wave1"></div>
+		<div class="wave wave2"></div>
+		<div class="wave wave3"></div>
+		<div class="wave wave4"></div>
+	</section>
+
+</body>
+</html>
+
+

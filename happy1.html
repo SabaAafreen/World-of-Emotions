@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Gumball Machine</title>
+
+<style>
+
+   body {
+		background-color: #F6F5F5;
+		font-family: 'Poppins', Arial, Helvetica, sans-serif;
+		font-size: medium;
+		color: #ffff;
+		
+   }
+   h1 {
+		font-family: 'Poppins', sans-serif;
+		text-transform: uppercase;
+		color: #ffff;
+		text-align: center;
+		margin-top: 200px;
+		font-size: 40px;
+		transition: 1s;
+	}
+   #machine{
+		background-color: transparent;
+		position: absolute;
+		display: block;
+		margin-left: 125px;
+		z-index: 1;
+   
+   }
+   #gumball{
+		background-color: transparent;
+		position: absolute;
+		margin-left: 120px;
+		display: none;
+		z-index: 2;
+   }
+   
+   
+   #gumballWorld{
+		background-color: transparent;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		display: none;
+		z-index: 3;
+   
+   }
+   
+	#smiley{
+		background-color: transparent;
+		position: absolute;
+		margin-left: 50px;
+		margin-top: 500px;
+		display: none;
+		z-index: 6 ;
+	
+	}
+	#smiley: hover{
+		box-shadow: 0px 0px 25px #3a3a3c;
+		transition: box-shadow 0.3s;
+		
+	}
+  
+   .player {
+	  opacity: 40%;
+	  position: fixed;
+	  margin-left: 20px;
+	  z-index: 7;
+	}
+	.player.ha1 {
+		margin-top: 30px;
+	}
+	
+	#circle {
+		background-color: #FAE567;
+		position: absolute;
+		padding: 25px;
+		text-transform: uppercase;
+		margin-left: 995px;
+		margin-top: 40px;
+		height: 100px;
+		width: 100px;
+		border-radius: 50%;
+		display: inline-block;
+		text-align: center;
+		transition: border-radius 1s, box-shadow 1s, background 1s, transform 1s;
+		z-index: 4;
+		
+    }
+    
+	
+	#circle:hover {
+		border-radius: 25%;
+		box-shadow: 0px 0px 25px #3a3a3c;
+		transition: border-radius 0.3s, box-shadow 0.3s, background 0.3s, transform 0.5s;
+    }
+	
+	
+	#circle2 {
+		background-color: #FAE567;
+		position: absolute;
+		padding: 25px;
+		text-transform: uppercase;
+		margin-left: 1050px;
+		margin-top: 280px;
+		height: 100px;
+		width: 100px;
+		border-radius: 50%;
+		display: none;
+		text-align: center;
+		transition: border-radius 1s, box-shadow 1s, background 1s, transform 1s;
+		z-index: 4;
+		
+    }
+    
+	
+	#circle2:hover {
+		border-radius: 25%;
+		box-shadow: 0px 0px 25px #3a3a3c;
+		transition: border-radius 0.3s, box-shadow 0.3s, background 0.3s, transform 0.5s;
+    }
+	
+	a:link {
+		color: black;
+		text-decoration: none;
+	}
+	  
+	a:visited {
+		color: black;
+		text-decoration: none;
+	}
+	  
+	a:hover {
+		color: black;
+		text-decoration: none;
+	}
+	  
+	a:active {
+		color: black;
+		text-decoration: none;
+	}
+	
+	
+
+</style>
+<script>
+
+function randInt(low,high) {
+	return Math.floor(Math.random()*(high-low+1)+low);
+}
+
+function showRandomMachine(){
+	var t = randInt(1,2); 
+	var newSrc = "";  
+	var newSrc2= "";
+	
+	if (t == 1)  { 
+		newSrc = "gumball-machine-empty-02.png"; 
+		newSrc2= "gumball-machine.png";
+		}
+		
+	else if (t == 2) {
+		newSrc = "gumball-machine-red-empty-02.png"; 
+		newSrc2= "gumball-machine-red-02.png";
+		}
+		
+	
+	machine.src = newSrc; 
+	gumball.src = newSrc2;
+}
+function showmachine(machineimg){
+	var state1 = document.getElementById(machineimg).style.display;
+		
+	if(state1 == 'block'){
+		document.getElementById(machineimg).style.display = 'none';
+	}
+	else{
+		document.getElementById(machineimg).style.display = 'block';
+	}
+}
+function hidemachine1(machine1img){
+	var state2 = document.getElementById(machine1img).style.display;
+		
+	if(state2 == 'block'){
+		document.getElementById(machine1img).style.display = 'block';
+	}
+	else{
+		document.getElementById(machine1img).style.display = 'none';
+	}
+}
+function hidegenerateButton(genButton){
+	var state3 = document.getElementById(genButton).style.display;
+		
+	if(state3 == 'block'){
+		document.getElementById(genButton).style.display = 'block';
+	}
+	else{
+		document.getElementById(genButton).style.display = 'none';
+	}
+}
+
+function showcircley(circlebutton){
+	var stateYC = document.getElementById(circlebutton).style.display;
+		
+	if(stateYC == 'inline-block'){
+		document.getElementById(circlebutton).style.display = 'none';
+	}
+	else{
+		document.getElementById(circlebutton).style.display = 'inline-block';
+	}
+}
+
+
+function showWorld(gumballworld){
+	alert("Welcome to the WORLD OF GUMBALLS!");
+	var stateW = document.getElementById(gumballworld).style.display;
+	if(stateW == 'block'){
+		document.getElementById(gumballworld).style.display = 'none';
+	}
+	else{
+		document.getElementById(gumballworld).style.display = 'block';
+	}
+}
+function showSmiley(smileyGumball){
+	var stateS = document.getElementById(smileyGumball).style.display;
+	if(stateS == 'block'){
+		document.getElementById(smileyGumball).style.display = 'none';
+	}
+	else{
+		document.getElementById(smileyGumball).style.display = 'block';
+	}
+}
+function hidemachine2(machine2img){
+	var stateM2 = document.getElementById(machine2img).style.display;
+		
+	if(stateM2 == 'block'){
+		document.getElementById(machine2img).style.display = 'none';
+	}
+	else{
+		document.getElementById(machine2img).style.display = 'block';
+	}
+}
+
+function hideEnterButton(enterButton){
+	var state4 = document.getElementById(enterButton).style.display;
+		
+	if(state4 == 'block'){
+		document.getElementById(enterButton).style.display = 'block';
+	}
+	else{
+		document.getElementById(enterButton).style.display = 'none';
+	}
+}
+</script>
+</head>
+
+<body onload="showRandomMachine();">
+
+<audio controls autoplay loop class="player ha1"><source src="Happy1.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
+
+<img src="gumball-machine-empty-02.png" id="machine" alt="purple gumball machine with colourful gumballs" >
+ 
+
+<a href ="#bottom"  onclick= "hidemachine1('machine'); showmachine('gumball'); hidegenerateButton('circle'); showcircley('circle2'); ">
+<div id = "circle"><p><b><br>Generate Gumball</b></p></div>
+</a>
+
+<img src="gumball-machine.png" id="gumball" alt="patterned gumball" >
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br><br>
+<a id="bottom"></a>
+
+
+<a href ="#" onclick="showWorld('gumballWorld'); hideEnterButton('circle2'); hidemachine2('gumball'); showSmiley('smiley');">
+<div id = "circle2"><p><b>Enter the world of gumballs</b></p></div></a>
+
+<!--fade in gumball world after clicking 'Enter the world of gumballs' button-->
+<div id = "gumballWorld" ><img src="gumball-world-small.png" alt="patterned gumballs everywhere to create a 'world'" ></div>
+
+
+<a href="happy2.html">
+<div id = "smiley"><img src="smiley.png" alt="yellow smiley face gumball" ></div>
+</a>
+
+
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Feelings </title>
+    <link rel="stylesheet" href="sad.css">
+
+    <script>
+
+        function newImage(arg) {
+            if (document.images) {
+                rslt = new Image();
+                rslt.src = arg;
+                return rslt;
+            }
+        }
+
+
+        function simplechangeImage(image, newimage) {
+            var Image2Change = document.getElementById(image);
+            var newSrc = newimage;
+            Image2Change.src = newSrc;
+        }
+
+
+        var preloadFlag = false;
+        function preloadImages() {
+            if (document.images) {
+                img1 = newImage("gradientcircle-1.png");
+                img2 = newImage("gradientcircle-2.png");
+                img3 = newImage("gradientcircle-3.png");
+                img4 = newImage("gradientcircle-4.png");
+                img1 = newImage("gradientcircle-5.png");
+                img2 = newImage("gradientcircle-6.png");
+                img3 = newImage("gradientcircle-7.png");
+                preloadFlag = true;
+            }
+        }
+
+
+    </script>
+</head>
+
+<body class="sad3" onload="preloadImages();">
+
+    <audio controls autoplay loop class="player s4">
+        <source src="sad4.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="circle-change">
+
+        <a href="landing.html" onmouseover="simplechangeImage('simple', 'gradientcircle-1.png'); return true;"
+            onmouseout="simplechangeImage('simple', 'plaincircle.png'); return true;"><img id="simple"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="sad1.html" onmouseover="simplechangeImage('simple2', 'gradientcircle-2.png'); return true;"
+            onmouseout="simplechangeImage('simple2', 'plaincircle.png'); return true;"><img id="simple2"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="landing.html" onmouseover="simplechangeImage('simple3', 'gradientcircle-3.png'); return true;"
+            onmouseout="simplechangeImage('simple3', 'plaincircle.png'); return true;"><img id="simple3"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="sad2.html" onmouseover="simplechangeImage('simple4', 'gradientcircle-5.png'); return true;"
+            onmouseout="simplechangeImage('simple4', 'plaincircle.png'); return true;"><img id="simple4"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="landing.html" onmouseover="simplechangeImage('simple5', 'gradientcircle-7.png'); return true;"
+            onmouseout="simplechangeImage('simple5', 'plaincircle.png'); return true;"><img id="simple5"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="sad3.html" onmouseover="simplechangeImage('simple6', 'gradientcircle-2.png'); return true;"
+            onmouseout="simplechangeImage('simple6', 'plaincircle.png'); return true;"><img id="simple6"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="landing.html" onmouseover="simplechangeImage('simple7', 'gradientcircle-6.png'); return true;"
+            onmouseout="simplechangeImage('simple7', 'plaincircle.png'); return true;"><img id="simple7"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="landing.html" onmouseover="simplechangeImage('simple8', 'gradientcircle-4.png'); return true;"
+            onmouseout="simplechangeImage('simple8', 'plaincircle.png'); return true;"><img id="simple8"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="sad3.html" onmouseover="simplechangeImage('simple9', 'gradientcircle-3.png'); return true;"
+            onmouseout="simplechangeImage('simple9', 'plaincircle.png'); return true;"><img id="simple9"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="sad2.html" onmouseover="simplechangeImage('simple10', 'gradientcircle-6.png'); return true;"
+            onmouseout="simplechangeImage('simple10', 'plaincircle.png'); return true;"><img id="simple10"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="landing.html" onmouseover="simplechangeImage('simple11', 'gradientcircle-5.png'); return true;"
+            onmouseout="simplechangeImage('simple11', 'plaincircle.png'); return true;"><img id="simple11"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <!-- CIRCLES ROW 2 -->
+
+        <a href="sad1.html" onmouseover="simplechangeImage('simple12', 'gradientcircle-7.png'); return true;"
+            onmouseout="simplechangeImage('simple12', 'plaincircle.png'); return true;"><img id="simple12"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="landing.html" onmouseover="simplechangeImage('simple13', 'gradientcircle-3.png'); return true;"
+            onmouseout="simplechangeImage('simple13', 'plaincircle.png'); return true;"><img id="simple13"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple14', 'gradientcircle-4.png'); return true;"
+            onmouseout="simplechangeImage('simple14', 'plaincircle.png'); return true;"><img id="simple14"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="landing.html" onmouseover="simplechangeImage('simple15', 'gradientcircle-6.png'); return true;"
+            onmouseout="simplechangeImage('simple15', 'plaincircle.png'); return true;"><img id="simple15"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="sad2.html" onmouseover="simplechangeImage('simple16', 'gradientcircle-5.png'); return true;"
+            onmouseout="simplechangeImage('simple16', 'plaincircle.png'); return true;"><img id="simple16"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="sad3.html" onmouseover="simplechangeImage('simple17', 'gradientcircle-7.png'); return true;"
+            onmouseout="simplechangeImage('simple17', 'plaincircle.png'); return true;"><img id="simple17"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="landing.html" onmouseover="simplechangeImage('simple18', 'gradientcircle-2.png'); return true;"
+            onmouseout="simplechangeImage('simple18', 'plaincircle.png'); return true;"><img id="simple18"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple19', 'gradientcircle-1.png'); return true;"
+            onmouseout="simplechangeImage('simple19', 'plaincircle.png'); return true;"><img id="simple19"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple20', 'gradientcircle-4.png'); return true;"
+            onmouseout="simplechangeImage('simple20', 'plaincircle.png'); return true;"><img id="simple20"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple21', 'gradientcircle-6.png'); return true;"
+            onmouseout="simplechangeImage('simple21', 'plaincircle.png'); return true;"><img id="simple21"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple22', 'gradientcircle-1.png'); return true;"
+            onmouseout="simplechangeImage('simple22', 'plaincircle.png'); return true;"><img id="simple22"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <!-- CIRCLES ROW 3 -->
+
+        <a href="#" onmouseover="simplechangeImage('simple23', 'gradientcircle-5.png'); return true;"
+            onmouseout="simplechangeImage('simple23', 'plaincircle.png'); return true;"><img id="simple23"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple24', 'gradientcircle-2.png'); return true;"
+            onmouseout="simplechangeImage('simple24', 'plaincircle.png'); return true;"><img id="simple24"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple25', 'gradientcircle-4.png'); return true;"
+            onmouseout="simplechangeImage('simple25', 'plaincircle.png'); return true;"><img id="simple25"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple26', 'gradientcircle-5.png'); return true;"
+            onmouseout="simplechangeImage('simple26', 'plaincircle.png'); return true;"><img id="simple26"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple27', 'gradientcircle-7.png'); return true;"
+            onmouseout="simplechangeImage('simple27', 'plaincircle.png'); return true;"><img id="simple27"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple28', 'gradientcircle-5.png'); return true;"
+            onmouseout="simplechangeImage('simple28', 'plaincircle.png'); return true;"><img id="simple28"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple29', 'gradientcircle-3.png'); return true;"
+            onmouseout="simplechangeImage('simple29', 'plaincircle.png'); return true;"><img id="simple29"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple30', 'gradientcircle-1.png'); return true;"
+            onmouseout="simplechangeImage('simple30', 'plaincircle.png'); return true;"><img id="simple30"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple31', 'gradientcircle-7.png'); return true;"
+            onmouseout="simplechangeImage('simple31', 'plaincircle.png'); return true;"><img id="simple31"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple32', 'gradientcircle-1.png'); return true;"
+            onmouseout="simplechangeImage('simple32', 'plaincircle.png'); return true;"><img id="simple32"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple33', 'gradientcircle-6.png'); return true;"
+            onmouseout="simplechangeImage('simple33', 'plaincircle.png'); return true;"><img id="simple33"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <!-- CIRCLES ROW 4 -->
+
+        <a href="#" onmouseover="simplechangeImage('simple34', 'gradientcircle-2.png'); return true;"
+            onmouseout="simplechangeImage('simple34', 'plaincircle.png'); return true;"><img id="simple34"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple35', 'gradientcircle-1.png'); return true;"
+            onmouseout="simplechangeImage('simple35', 'plaincircle.png'); return true;"><img id="simple35"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple36', 'gradientcircle-6.png'); return true;"
+            onmouseout="simplechangeImage('simple36', 'plaincircle.png'); return true;"><img id="simple36"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple37', 'gradientcircle-7.png'); return true;"
+            onmouseout="simplechangeImage('simple37', 'plaincircle.png'); return true;"><img id="simple37"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple38', 'gradientcircle-5.png'); return true;"
+            onmouseout="simplechangeImage('simple38', 'plaincircle.png'); return true;"><img id="simple38"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple39', 'gradientcircle-3.png'); return true;"
+            onmouseout="simplechangeImage('simple39', 'plaincircle.png'); return true;"><img id="simple39"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple40', 'gradientcircle-4.png'); return true;"
+            onmouseout="simplechangeImage('simple40', 'plaincircle.png'); return true;"><img id="simple40"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple41', 'gradientcircle-6.png'); return true;"
+            onmouseout="simplechangeImage('simple41', 'plaincircle.png'); return true;"><img id="simple41"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple42', 'gradientcircle-7.png'); return true;"
+            onmouseout="simplechangeImage('simple42', 'plaincircle.png'); return true;"><img id="simple42"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple43', 'gradientcircle-2.png'); return true;"
+            onmouseout="simplechangeImage('simple43', 'plaincircle.png'); return true;"><img id="simple43"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple44', 'gradientcircle-5.png'); return true;"
+            onmouseout="simplechangeImage('simple44', 'plaincircle.png'); return true;"><img id="simple44"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <!-- CIRCLES ROW 5 -->
+
+        <a href="#" onmouseover="simplechangeImage('simple45', 'gradientcircle-3.png'); return true;"
+            onmouseout="simplechangeImage('simple45', 'plaincircle.png'); return true;"><img id="simple45"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple46', 'gradientcircle-5.png'); return true;"
+            onmouseout="simplechangeImage('simple46', 'plaincircle.png'); return true;"><img id="simple46"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple47', 'gradientcircle-6.png'); return true;"
+            onmouseout="simplechangeImage('simple47', 'plaincircle.png'); return true;"><img id="simple47"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple48', 'gradientcircle-7.png'); return true;"
+            onmouseout="simplechangeImage('simple48', 'plaincircle.png'); return true;"><img id="simple48"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple49', 'gradientcircle-5.png'); return true;"
+            onmouseout="simplechangeImage('simple49', 'plaincircle.png'); return true;"><img id="simple49"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple50', 'gradientcircle-2.png'); return true;"
+            onmouseout="simplechangeImage('simple50', 'plaincircle.png'); return true;"><img id="simple50"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple51', 'gradientcircle-4.png'); return true;"
+            onmouseout="simplechangeImage('simple51', 'plaincircle.png'); return true;"><img id="simple51"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple52', 'gradientcircle-2.png'); return true;"
+            onmouseout="simplechangeImage('simple52', 'plaincircle.png'); return true;"><img id="simple52"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple53', 'gradientcircle-3.png'); return true;"
+            onmouseout="simplechangeImage('simple53', 'plaincircle.png'); return true;"><img id="simple53"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple54', 'gradientcircle-4.png'); return true;"
+            onmouseout="simplechangeImage('simple54', 'plaincircle.png'); return true;"><img id="simple54"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple55', 'gradientcircle-2.png'); return true;"
+            onmouseout="simplechangeImage('simple55', 'plaincircle.png'); return true;"><img id="simple55"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <!-- CIRCLES ROW 6 -->
+
+        <a href="#" onmouseover="simplechangeImage('simple56', 'gradientcircle-2.png'); return true;"
+            onmouseout="simplechangeImage('simple56', 'plaincircle.png'); return true;"><img id="simple56"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple57', 'gradientcircle-4.png'); return true;"
+            onmouseout="simplechangeImage('simple57', 'plaincircle.png'); return true;"><img id="simple57"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple58', 'gradientcircle-5.png'); return true;"
+            onmouseout="simplechangeImage('simple58', 'plaincircle.png'); return true;"><img id="simple58"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple59', 'gradientcircle-7.png'); return true;"
+            onmouseout="simplechangeImage('simple59', 'plaincircle.png'); return true;"><img id="simple59"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple60', 'gradientcircle-6.png'); return true;"
+            onmouseout="simplechangeImage('simple60', 'plaincircle.png'); return true;"><img id="simple60"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple61', 'gradientcircle-1.png'); return true;"
+            onmouseout="simplechangeImage('simple61', 'plaincircle.png'); return true;"><img id="simple61"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple62', 'gradientcircle-2.png'); return true;"
+            onmouseout="simplechangeImage('simple62', 'plaincircle.png'); return true;"><img id="simple62"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple63', 'gradientcircle-5.png'); return true;"
+            onmouseout="simplechangeImage('simple63', 'plaincircle.png'); return true;"><img id="simple63"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple64', 'gradientcircle-2.png'); return true;"
+            onmouseout="simplechangeImage('simple64', 'plaincircle.png'); return true;"><img id="simple64"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="#" onmouseover="simplechangeImage('simple65', 'gradientcircle-3.png'); return true;"
+            onmouseout="simplechangeImage('simple65', 'plaincircle.png'); return true;"><img id="simple65"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+        <a href="landing.html" onmouseover="simplechangeImage('simple66', 'gradientcircle-1.png'); return true;"
+            onmouseout="simplechangeImage('simple66', 'plaincircle.png'); return true;"><img id="simple66"
+                src="plaincircle.png" width="100" height="100" alt="1"></a>
+
+    </div>
+
+</body>
+
+</html>

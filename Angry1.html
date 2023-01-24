@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> What type of anger do you feel? </title>
+    <style type="text/css">
+        
+        .angry4-img {
+        background: black;
+        color: white;
+        }
+
+        #simple {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+        }
+
+        h1 {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+        }
+
+        #simple1 {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+        }
+
+        #simple2 {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+        }
+
+        #simple3 {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+        }
+
+        .circle {
+          background-color: #F6F5F5;
+          position: absolute;
+          padding: 25px;
+          opacity: 0.9;
+          margin-left: 560px;
+          margin-top: 100px;
+          height: 100px;
+          width: 100px;
+          border-radius: 50%;
+          display: inline-block;
+          text-align: center;
+          transition: border-radius 1s, box-shadow 1s, background 1s, transform 1s;
+          z-index: 4;
+          color: white;
+          }
+    
+  
+        .circle:hover {
+          border-radius: 25%;
+          color: red;
+          box-shadow: 0px 0px 25px #3a3a3c;
+          transition: border-radius 0.3s, box-shadow 0.3s, background 0.3s, transform 0.5s;
+          }
+
+        a:link {
+          text-decoration: none;
+        }
+        
+        a:visited {
+          text-decoration: none;
+        }
+        
+        a:hover {
+          text-decoration: none;
+        }
+        
+        a:active {
+          text-decoration: none;
+        }
+      
+    </style>
+
+    <script>
+
+      alert ("Anger is hidden in the darker parts!")
+      function newImage(arg) {
+      if (document.images) {
+        rslt = new Image();
+        rslt.src = arg;
+        return rslt;
+        }
+      }
+
+
+      function simplechangeImage(image, newimage) {
+        var Image2Change = document.getElementById(image);
+        var newSrc = newimage;
+        Image2Change.src = newSrc;
+      }
+
+
+      var preloadFlag = false;
+      function preloadImages() {
+        if (document.images) {
+          img1 = newImage("Asset 1.png");
+          img2 = newImage("Asset 2.png");
+          img3 = newImage("Asset 3.png");
+          img4 = newImage("Asset 4.png");
+          img5 = newImage("Asset 5.png");
+          img6 = newImage("Asset 6.png");
+          preloadFlag = true;
+        }
+      }
+
+</script>
+
+</head>
+
+<body class= "angry4-img" onload="preloadImages()";>
+
+    <audio controls autoplay loop>
+        <source src="angry3.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <h1>What does anger look like to you?</h1>
+
+    <div>
+       <a href="Angry2.html" onmouseover="simplechangeImage('simple', 'Asset 1.png'); return true;"
+        onmouseout="simplechangeImage('simple', 'Asset 2.png'); return true;"> <img id="simple" src="Asset 1.png"></a>
+
+    </div>
+
+     <div>
+       <a href="Angry2.html" onmouseover="simplechangeImage('simple2', 'Asset 4.png'); return true;"
+        onmouseout="simplechangeImage('simple2', 'Asset 3.png'); return true;"><img id="simple2" src="Asset 4.png"></a>
+
+    </div>
+
+     <div>
+       <a href="Angry2.html" onmouseover="simplechangeImage('simple3', 'Asset 5.png'); return true;"
+        onmouseout="simplechangeImage('simple3', 'Asset 6.png'); return true;"><img id="simple3" src="Asset 5.png"></a>
+    </div>
+
+</p>
+
+    <a href="Angry2.html">
+        <div class="circle">Know why you feel this?</div>
+    </a>
+
+</body>
+
+</html>

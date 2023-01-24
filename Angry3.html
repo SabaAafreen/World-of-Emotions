@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Feelings </title>
+    <style type="text/css">
+        
+        body {
+          background-color: black;
+          position: center;
+
+        }
+
+        .circlebutton2 {
+          background-color: blue;
+          opacity: 0.9;
+          position: absolute;
+          padding: 25px;
+          margin-left: 850px;
+          margin-top: 100px;
+          height: 90px;
+          width: 90px;
+          border-radius: 50%;
+          display: inline-block;
+          transition: border-radius 1s, box-shadow 1s, background 1s, transform 1s;
+          text-align: center;
+          letter-spacing: 0.5px;
+          z-index: 2;
+          color: white;
+        }
+    
+  
+        .circlebutton2:hover {
+          border-radius: 25%;
+          box-shadow: 0px 0px 25px #3a3a3c;
+          transition: border-radius 0.3s, box-shadow 0.3s, background 0.3s, transform 0.5s;
+          }
+
+        .circlebutton1 {
+          background-color: red;
+          opacity: 0.9;
+          position: absolute;
+          padding: 25px;
+          margin-right: 850px;
+          margin-top: 100px;
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+          display: inline-block;
+          transition: border-radius 1s, box-shadow 1s, background 1s, transform 1s;
+          text-align: center;
+          letter-spacing: 0.5px;
+          z-index: 2;
+          color: white;
+          
+        }
+    
+        .circlebutton1:hover {
+          border-radius: 25%;
+          box-shadow: 0px 0px 25px #3a3a3c;
+          transition: border-radius 0.3s, box-shadow 0.3s, background 0.3s, transform 0.5s;
+          }
+      
+    </style>
+
+   <script>
+
+    function randInt(low,high) {
+      return Math.floor(Math.random()*(high-low+1)+low);
+    }
+
+function showImage(image, description){
+
+  var t = randInt(1,4); 
+  
+  var Image2Change = document.getElementById(image); 
+  var theDescription = document.getElementById(description); 
+  
+  var newSrc = "";  
+  var myText = "";
+  
+  if (t == 1)  { 
+    newSrc = "Angry3_01.png"; 
+    myText = "<b> BURST IT</b>";
+    }
+    
+  else if (t == 2) {
+    newSrc = "Angry3_02.png"; 
+    myText = "<b>ELECTROFY IT</b>";
+    }
+    
+  else if (t == 3) {
+    newSrc = "Angry3_03.png"; 
+    myText = "<b>LIQUIDATE IT</b>";
+    }
+    
+  else if (t == 4) {
+    newSrc = "Angry3_04.png"; 
+    myText = "<b>BLUR IT</b>";
+    }
+    
+  Image2Change.src = newSrc;  
+
+  Image2Change.width = 1280;  
+  Image2Change.height = 800;
+  
+  
+  theDescription.innerHTML = myText;
+  
+} 
+
+</script>
+
+</head>
+
+<body onload="showImage('theImage', 'theDesc');">
+
+    <audio controls autoplay loop class="player s3">
+        <source src="angry3.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <p>
+        <img src="Angry3_04.png" id="theImage" alt="random image" height="800" width="1280">
+    </p>
+
+     <a href="Angry4.html">
+        <div class="circlebutton1">Escape</div>
+    </a>
+
+    <a href="Angry3.html">
+        <div class="circlebutton2">Do Something </div>
+    </a>
+
+</body>
+
+</html>
