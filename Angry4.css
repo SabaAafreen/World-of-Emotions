@@ -1,0 +1,156 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barrio&display=swap');
+
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'Barrio', cursive;
+}
+
+p {
+	text-align: center;
+	height: 200px;
+    width: 400px;
+
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+    font-size: 65px;
+    color: white;
+}
+section
+{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-image: url(Angry4_01.png);
+	overflow: hidden;
+
+}
+
+section .wave
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	background: url(Angry4_02.png);
+	background-size: 1000px 100px;
+}
+
+section .wave.wave1
+{
+	animation: animate 30s linear infinite;
+	z-index: 1000;
+	opacity: 1;
+	animation-delay: 0s;
+	bottom: 0;
+}
+
+section .wave.wave2
+{
+	animation: animate2 15s linear infinite;
+	z-index: 999;
+	opacity: 0.5;
+	animation-delay: -5s;
+	bottom: 10px;
+}
+
+section .wave.wave3
+{
+	animation: animate 30s linear infinite;
+	z-index: 998;
+	opacity: 0.2;
+	animation-delay: -2s;
+	bottom: 15;
+}
+
+section .wave.wave4
+{
+	animation: animate2 5s linear infinite;
+	z-index: 997;
+	opacity: 0.7;
+	animation-delay: -5s;
+	bottom: 20px;
+}
+
+.button {
+  background-color: #F0F8FF;
+  border: none;
+  color: #36648B;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  position: absolute;
+  top: 20%;
+  right: 40%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+}
+
+.button:hover {opacity: 1}
+
+.feelcheck {
+  padding: 25px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: box-shadow 1s;
+  background-color: #0278;
+  position: fixed;
+  z-index: 2;
+
+  margin-left: 1070px;
+  margin-top: 415px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  align-items: center; 
+  justify-content: center;
+  display: flex;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+}
+.feelcheck:hover {
+  box-shadow: 0px 0px 25px #3a3a3c;
+}
+
+@keyframes animate
+{
+	0%
+	{
+		background-position-x: 0;
+	}
+
+	100%
+	{
+		background-position-x: 1000px;
+	}
+}
+
+@keyframes animate2
+{
+	0%
+	{
+		background-position-x: 0;
+	}
+
+	100%
+	{
+		background-position-x: -1000px;
+	}
+}
+

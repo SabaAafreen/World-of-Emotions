@@ -1,0 +1,362 @@
+
+/* Browser size is 1280x800 */
+/* FONT STYLE */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+a:link {
+    text-decoration: none;
+  }
+  
+  a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  a:active {
+    text-decoration: none;
+  }
+
+.landing-page {
+	background: linear-gradient(-90deg, #FF7F5C, #0278AE, #FAE567);
+	background-size: 300% 300%;
+	animation: gradient 12s ease infinite; 
+}
+
+@keyframes gradient2 {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.back-text {
+  font-size: 16px;
+margin-left: 12px;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    color: #ffff;
+    text-align: center;
+    margin-top: 200px;
+    font-size: 40px;
+    transition: 0s;
+}
+
+body {
+   font-family: 'Poppins', Arial, Helvetica, sans-serif;
+   	font-size: medium;
+	color: #ffff;
+   }
+
+.landing-circles {
+    margin: auto;
+  width: 45%;
+}
+.circle {
+    padding: 25px;
+    margin: 15px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: inline-block;
+    transition: border-radius 1s, box-shadow 1s, background 1s, transform 1s;
+}
+   .circle.happy {
+    background-color: #FAE567;
+}
+.circle.sad {
+    background-color: #0278;
+}
+.circle.angry {
+    background-color: #FF7F5C;
+}
+.circle:hover {
+    border-radius: 25%;
+    box-shadow: 0px 0px 25px #3a3a3c;
+    transform: rotate(225deg);
+    transition: border-radius 0.3s, box-shadow 0.3s, background 0.3s, transform 0.5s;
+}
+.sad1-page {
+	background: linear-gradient(-90deg, #023041, #0278AE, #00151f);
+	background-size: 300% 300%;
+	animation: gradient 8s ease infinite; 
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* represents the coming and going (fading) and confsuion that may come with sadness */
+/* SAD PAGE 01 */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 22px;
+    margin-top: 50px;
+  }
+
+.grid-item {
+height: 100px;
+  width: 100px;
+  background: #001c29;
+  opacity: 0;
+  transition: opacity 2s ease;
+  border-radius: 50%;
+  animation: gradient-shape 2s ease infinite; 
+}
+
+.grid-item:hover {
+    opacity: 1;
+    transition: opacity 0.2s ease;
+    transform: scale(1.04);
+    background: #001c29;
+    border-radius: 25%;
+    transform: rotate(45deg);
+    animation: gradient-shape 2s ease infinite; 
+}
+
+@keyframes gradient-shape {
+	0% {
+		border-radius: 50%;
+	}
+	50% {
+		border-radius: 0%;
+	}
+	100% {
+		border-radius: 50%;
+	}
+}
+
+/* Blue Circle Button Styling */ 
+.circle2 {
+    padding: 25px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: inline-block;
+    transition: box-shadow 1s;
+    background-color: #0278;
+    position: fixed;
+    z-index: 2;
+
+    margin-left: 1070px;
+    margin-top: 450px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    align-items: center; 
+    justify-content: center;
+    display: flex;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+}
+.circle2:hover {
+    box-shadow: 0px 0px 25px #3a3a3c;
+}
+
+/* represents the feeling of being stuck in the void of sadness */
+/* SAD PAGE 02 */
+.sad2-page {
+  background-image: url(gradient-bg.jpg);
+  background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Blue Circle Button Styling */ 
+.circle3 {
+  padding: 25px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: box-shadow 1s;
+  background-color: #0278;
+  position: fixed;
+  z-index: 2;
+
+  margin-left: 1070px;
+  margin-top: 415px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  align-items: center; 
+  justify-content: center;
+  display: flex;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+}
+.circle3:hover {
+  box-shadow: 0px 0px 25px #3a3a3c;
+}
+
+#TheMovingDiv
+{
+	position:absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #ffff;
+  left: 620px;
+	top: 390px;
+	z-index: 2;
+}
+
+.mov-keys {
+  text-align: center;
+  width: 50px;
+  margin: 10px;
+  margin-left: 20px;
+  margin-top: 90px;
+}
+
+
+/* SAD PAGE 03 */
+
+.sad3-img {
+  background-color: black;
+}
+
+#theImage {
+  margin: -25px;
+  opacity: 50%;
+}
+
+.overlay-img {
+  position: fixed;
+  align-content: center;
+  margin: -25px;
+  margin-left: 250px;
+  opacity: 75%;
+}
+
+/* Blue Circle Button Styling */ 
+.circle3.text {
+  color: #f2f2f7;
+  font-size: 12.6px;
+  letter-spacing: 0.5px;
+  opacity: 75%;
+  margin-top: 495px;
+}
+
+.circle3.text2 {
+  margin-left: 15px;
+  margin-top: 75px;
+  width: 10px;
+  height: 10px;
+  font-size: 50px;
+  opacity: 60%;
+  color: #0278;
+  background-color: white;
+  transition: background-color 0.25s;
+}
+
+.circle3.text2:hover {
+  background-color: #ff7f5c;
+  transition: background-color 0.25s;
+}
+
+/* SAD PAGE 04 */
+
+.sad3 {
+	background: linear-gradient(-45deg, #003750, rgb(0, 17, 31));
+	background-size: 300% 300%;
+  animation: gradient 2s ease infinite; } 
+  
+/* AUDIO PLAYER STYLING */ 
+.player {
+  opacity: 40%;
+  position: fixed;
+  margin-left: 20px;
+  z-index: 2;
+}
+
+.player.s1 {
+  margin-top: -20px;
+}
+
+.player.s2 {
+  margin-top: -65px;
+}
+
+.player.s4 {
+  margin-top: -20px;
+}
+
+.circle-change {
+  margin: 30px;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+/* iNDEX PAGE STYLING */
+.index-page {
+	background: linear-gradient(-90deg, #FF7F5C, #0278AE, #FAE567);
+	background-size: 300% 300%;
+	animation: gradient 12s ease infinite; 
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.circle-index {
+  padding: 25px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: box-shadow 1s, background-color 0.75s;
+  background-color: #0278AE;
+  position: fixed;
+  z-index: 2;
+
+  margin-left: 650px;
+  margin-top: 265px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  align-items: center; 
+  justify-content: center;
+  display: flex;
+  font-size: 18px;
+  letter-spacing: 0.3px;
+  box-shadow: 0px 0px 10px #193c7c;
+}
+.circle-index:hover {
+  box-shadow: 0px 0px 25px #742525;
+  background-color: #FF7F5C;
+
+}
+
+.circle-index.i2 {
+  margin-left: 450px;
+}
